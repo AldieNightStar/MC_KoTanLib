@@ -1,10 +1,11 @@
 package haxidenti.kotan
 
-import org.bukkit.plugin.java.JavaPlugin
 import org.bukkit.event.Listener
+import org.bukkit.plugin.java.JavaPlugin
 
-class Main : JavaPlugin(), Listener {
+class KotanMain : JavaPlugin(), Listener {
     override fun onEnable() {
         server.pluginManager.registerEvents(this, this)
     }
+
 }

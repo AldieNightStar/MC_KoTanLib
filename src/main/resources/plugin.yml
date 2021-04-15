@@ -1,4 +1,4 @@
-main: haxidenti.kotan.KotanKt
+main: haxidenti.kotan.KotanMain
 name: Kotan
 version: 1.0
 author: HaxiDenti
