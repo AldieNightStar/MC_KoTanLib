@@ -4,7 +4,7 @@ import org.bukkit.configuration.ConfigurationSection
 import org.bukkit.configuration.file.YamlConfiguration;
 import java.io.File
 
-class Data(private val dataFolder: File, private val fileName: String, private val sectionPath: String?) {
+class Data(private val dataFolder: File, private val fileName: String, sectionPath: String?) {
     val config: ConfigurationSection
     private val saveConfig: () -> Unit
 
@@ -13,7 +13,7 @@ class Data(private val dataFolder: File, private val fileName: String, private v
         saveConfig = { yml.save(File(dataFolder, "$fileName.yml")) }
 
         if (sectionPath == null) {
-            config = yml.defaultSection!!
+            config = yml.root!!
         } else {
             var section = yml.getConfigurationSection(sectionPath)
             if (section == null) {
@@ -38,7 +38,7 @@ class Data(private val dataFolder: File, private val fileName: String, private v
     }
 
     fun getKeys(): List<String> {
-        return config.defaultSection?.getKeys(false)?.toList() ?: listOf()
+        return config.getKeys(false).toList()
     }
 
     fun remove(k: String) {

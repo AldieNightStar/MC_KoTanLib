@@ -23,11 +23,5 @@ fun Player.giveItem(item: ItemStack) {
     giveItem(item) {}
 }
 
-fun Player.getData(dataFolder: File) = Data(dataFolder, "PlayerData", noDots(this.name))
-
-private fun noDots(n: String): String {
-    return n.replace(".", "_")
-}
-
 val CommandSender.isPlayer
     get() = this is Player
