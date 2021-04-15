@@ -1,0 +1,8 @@
+main: haxidenti.kotan.KotanKt
+name: Kotan
+version: 1.0
+author: HaxiDenti
+description: KoTan Lib for Kotlin Plugins
+api-version: 1.13
+depend:
+  - Kotlin
