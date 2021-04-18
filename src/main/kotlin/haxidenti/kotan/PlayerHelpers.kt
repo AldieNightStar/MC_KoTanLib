@@ -3,7 +3,6 @@ package haxidenti.kotan
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
 import org.bukkit.inventory.ItemStack
-import java.io.File
 
 val Player.itemInMainHand: ItemStack
     get() = this.inventory.itemInMainHand
